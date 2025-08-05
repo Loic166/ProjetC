@@ -13,7 +13,7 @@ make
 
 ### Exemple de sortie
 Inserer un nombre: 5
-5 est premier
+* 5 est premier
 
 #### Organisation
 
