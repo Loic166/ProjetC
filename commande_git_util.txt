@@ -48,3 +48,25 @@ Supression d'un fichier dans un ripository (sans touefois le suprimer localement
     Ensuite on fait :
     -git commit -m "..."
     -git push origin main
+
+Ajouter un dossier contenant des fichiers ou dossiers
+-git add mon_dossier/
+-git commit -m "..."
+-git push origin main
+
+Ajouter un fichier vide
+-touch uploads/.gitkeep
+-git add uploads/.gitkeep
+-git commit -m "..."
+-git push origin main
+
+Changer de dépôt distant (le origin)
+-git remote -v                     # Voir l’URL actuelle
+-git remote set-url origin git@github.com:TonUser/NouveauRepo.git
+-git remote -v                     # Vérifier que ça a changé
+
+Passer de HTTPS ➝ SSH / SSH ➝ HTTPS
+-git remote -v         # pour voir l'URL actuelle
+-Récupère l’URL SSH de ton repo GitHub (dans la page du repo, bouton vert Code → SSH)
+-Change l’URL avec : git remote set-url origin git@github.com:TonUser/TonRepo.git
+-git remote -v         # pour verifier si l'URL a bien ét1 changé
