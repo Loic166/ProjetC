@@ -1,0 +1,50 @@
+Initialisation & dépôt distant
+-git init                   # Initialise un repo local
+-git remote add origin git@github.com:TonUser/TonRepo.git
+-git remote -v              # Vérifie l’adresse du repo distant
+
+Suivi des fichiers & commits
+-git status                 # Vérifie l’état (ajouts, modifs, suppressions)
+-git add fichier.txt        # Ajoute un fichier
+-git add .                  # Ajoute tout
+-git commit -m "Message"    # Crée un commit
+-git log --oneline --graph  # Historique simplifié
+
+Suivi des fichiers & commits
+-git status                 # Vérifie l’état (ajouts, modifs, suppressions)
+-git add fichier.txt        # Ajoute un fichier
+-git add .                  # Ajoute tout
+-git commit -m "Message"    # Crée un commit
+-git log --oneline --graph  # Historique simplifié
+
+Pousser sur GitHub
+-git push -u origin main    # Premier push sur la branche "main"
+-git push                   # Push normal après le premier
+
+Récupérer & mettre à jour
+-git pull origin main       # Récupère les changements de GitHub
+-git fetch                  # Récupère sans fusionner
+-git merge origin/main      # Fusionne après fetch
+
+Branches
+-git branch                 # Liste les branches
+-git branch nouvelle-branche
+-git checkout nouvelle-branche       # Basculer
+-git checkout -b dev                # Crée + bascule direct
+-git merge dev                      # Fusionner une branche
+-git push origin nouvelle-branche   # Pousser une branche
+
+Annuler / Corriger
+-git checkout -- fichier.txt      # Annule modifs non ajoutées
+-git reset HEAD fichier.txt       # Retire du `git add`
+-git reset --hard HEAD            # Annule tout (attention !)
+-git commit --amend -m "Nouveau message"   # Modifier le dernier commit
+
+Clonage
+-git clone git@github.com:TonUser/TonRepo.git
+
+Supression d'un fichier dans un ripository (sans touefois le suprimer localement)
+-git rm --cached fichier.txt
+    Ensuite on fait :
+    -git commit -m "..."
+    -git push origin main
